@@ -1,2 +1,0 @@
-# privac
-Created with CodeSandbox

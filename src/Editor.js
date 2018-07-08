@@ -33,7 +33,7 @@ export class Editor extends React.Component {
   componentDidMount() {
     var location = window.location.href;
     if (location.search("#") !== -1) {
-      var data = location.replace("https://kkxjo8oyv.codesandbox.io/#", "");
+      var data = location.replace("https://privac.netlify.io#", "");
       this.changeLanguage(data.substring(0, 1));
       this.changeValue(data.substring(2));
     }

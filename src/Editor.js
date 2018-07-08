@@ -62,7 +62,7 @@ export class Editor extends React.Component {
       url: LZString.compressToEncodedURIComponent(this.state.value)
     });
     window.location.href =
-      "https://kkxjo8oyv.codesandbox.io/#" + cl + "/" + this.state.url;
+      "https://privac.netlify.com/#" + cl + "/" + this.state.url;
   }
   render() {
     return (
@@ -79,9 +79,11 @@ export class Editor extends React.Component {
         <AceEditor
           mode={this.state.language}
           theme="monokai"
+          wrapEnabled={true}
           value={this.state.value}
           onChange={this.onChange}
           name="editor"
+          width="100vh"
           editorProps={{ $blockScrolling: true }}
         />
         <button onClick={this.generate}>Generate</button>

@@ -27,23 +27,17 @@ export class Editor extends React.Component {
     this.onLanguageChange = this.onLanguageChange.bind(this);
     this.onChange = this.onChange.bind(this);
     this.changeValue = this.changeValue.bind(this);
-    this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   componentDidMount() {
     var location = window.location.href;
     if (location.search("#") !== -1) {
       var data = location.replace("https://privac.netlify.com/#", "");
-      this.changeLanguage(data.substring(0, 1));
-      this.changeValue(data.substring(2));
+      this.changeValue(data.substring(2),data.substring(0, 1));
     }
   }
-  changeValue(e) {
-    this.setState({ value: LZString.decompressFromEncodedURIComponent(e) });
-  }
-  changeLanguage(e) {
-    this.setState({ langauge: modes[e] });
-    console.log(modes[e]);
+  changeValue(e,l) {
+    this.setState({ value: LZString.decompressFromEncodedURIComponent(e),langauge: modes[l] });
   }
 
   onChange(newValue) {

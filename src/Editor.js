@@ -33,11 +33,14 @@ export class Editor extends React.Component {
     var location = window.location.href;
     if (location.search("#") !== -1) {
       var data = location.replace("https://privac.netlify.com/#", "");
-      this.changeValue(data.substring(2),data.substring(0, 1));
+      this.changeValue(data.substring(2), data.substring(0, 1));
     }
   }
-  changeValue(e,l) {
-    this.setState({ value: LZString.decompressFromEncodedURIComponent(e),langauge: modes[l] });
+  changeValue(e, l) {
+    this.setState({
+      value: LZString.decompressFromEncodedURIComponent(e),
+      language: modes[l]
+    });
   }
 
   onChange(newValue) {

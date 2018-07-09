@@ -28,6 +28,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div className="column">
+                SCAN THE CODE
                 <QRCode value={window.location.href} />
               </div>
             </div>

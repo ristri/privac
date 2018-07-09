@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bulma/css/bulma.css";
 import { Editor } from "./Editor";
-
 import "./styles.css";
-
+var QRCode = require("qrcode.react");
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +27,9 @@ class App extends React.Component {
                   <Editor />
                 </div>
               </div>
-              <div className="column">v</div>
+              <div className="column">
+                <QRCode value={window.location.href} />
+              </div>
             </div>
           </div>
         </section>

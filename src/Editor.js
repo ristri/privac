@@ -22,7 +22,7 @@ const modes = {
 export class Editor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { url: "", value: "", language: "text" };
+    this.state = { url: "", value: "", language: "text", font: 14 };
     this.generate = this.generate.bind(this);
     this.onLanguageChange = this.onLanguageChange.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -50,6 +50,9 @@ export class Editor extends React.Component {
   onLanguageChange(e) {
     this.setState({ language: e.target.value });
   }
+  onFontChange(e) {
+    this.setState({font: e.target.value})
+  }
   generate() {
     var cl;
     if (this.state.language !== "javascript")
@@ -64,27 +67,40 @@ export class Editor extends React.Component {
   render() {
     return (
       <div>
-        <select onChange={this.onLanguageChange} value={this.state.language}>
-          <option>text</option>
-          <option>c_cpp</option>
-          <option>python</option>
-          <option>java</option>
-          <option>javascript</option>
-          <option>html</option>
-          <option>golang</option>
-        </select>
-        <AceEditor
-          mode={this.state.language}
-          theme="monokai"
-          wrapEnabled={true}
-          value={this.state.value}
-          onChange={this.onChange}
-          name="editor"
-          width="100vh"
-          editorProps={{ $blockScrolling: true }}
-        />
-        <button onClick={this.generate}>Generate</button>
-        <div>{this.state.url}</div>
+        <div className="box">
+          <div className="columns">
+            <div className="column">
+              <span>Select Language:</span>
+              <div class="select is-rounded">
+                <select onChange={this.onLanguageChange} value={this.state.language}>
+                  <option>text</option>
+                  <option>c_cpp</option>
+                  <option>python</option>
+                  <option>java</option>
+                  <option>javascript</option>
+                  <option>html</option>
+                  <option>golang</option>
+                </select>
+              </div>
+            </div>
+            <div className="column">
+              <span>Font Size:</span>
+              <input className="input is-rounded" onChange={this.onFontChange} value={this.state.font} type="number" />
+            </div>
+            <div className="column"></div>
+          </div>
+          <AceEditor
+            mode={this.state.language}
+            theme="monokai"
+            wrapEnabled={true}
+            value={this.state.value}
+            onChange={this.onChange}
+            name="editor"
+            width="auto"
+            fontSize={this.state.font}
+            editorProps={{ $blockScrolling: true }}
+          />
+        </div>
       </div>
     );
   }

@@ -24,11 +24,9 @@ class App extends React.Component {
           <div className="container">
             <div className="columns">
               <div className="column is-two-thirds">
-                <div className="select is-rounded">
-                  <Editor />
-                </div>
+                <Editor />
               </div>
-              <div className="column">v</div>
+              <div className="column">vb</div>
             </div>
           </div>
         </section>

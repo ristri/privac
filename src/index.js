@@ -2,9 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bulma/css/bulma.css";
 import { Editor } from "./Editor";
-
 import "./styles.css";
-
+import {SidePanel} from "./SidePanel"
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +25,9 @@ class App extends React.Component {
               <div className="column is-two-thirds">
                 <Editor />
               </div>
-              <div className="column">vb</div>
+              <div className="column">
+              <SidePanel />
+              </div>
             </div>
           </div>
         </section>

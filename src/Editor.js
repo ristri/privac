@@ -32,7 +32,7 @@ export class Editor extends React.Component {
   componentDidMount() {
     var location = window.location.href;
     if (location.search("#") !== -1) {
-      var data = location.replace("https://ristri.github.io/privac"+"/#", "");
+      var data = location.replace("https://ristri.github.io/privac/#", "");
       console.log(window.location.hostname)
       this.changeValue(data.substring(2), data.substring(0, 1));
     }
@@ -63,7 +63,7 @@ export class Editor extends React.Component {
       url: LZString.compressToEncodedURIComponent(this.state.value)
     });
     window.location.href =
-      "https://ristri.github.io/privac"+"/#" + cl + "/" + this.state.url;
+      "https://ristri.github.io/privac/#" + cl + "/" + this.state.url;
   }
   copyToClipboard = ()=>{
     navigator.clipboard.writeText(window.location)

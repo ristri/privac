@@ -5,9 +5,6 @@ import { Editor } from "./Editor";
 import "./styles.css";
 import {SidePanel} from "./SidePanel"
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="App">

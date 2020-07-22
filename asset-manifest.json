@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/privac/static/css/main.dc934136.chunk.css",
+    "main.js": "/privac/static/js/main.74c4e253.chunk.js",
+    "main.js.map": "/privac/static/js/main.74c4e253.chunk.js.map",
+    "runtime-main.js": "/privac/static/js/runtime-main.e0d70412.js",
+    "runtime-main.js.map": "/privac/static/js/runtime-main.e0d70412.js.map",
+    "static/css/2.0c0672e5.chunk.css": "/privac/static/css/2.0c0672e5.chunk.css",
+    "static/js/2.64ee4b99.chunk.js": "/privac/static/js/2.64ee4b99.chunk.js",
+    "static/js/2.64ee4b99.chunk.js.map": "/privac/static/js/2.64ee4b99.chunk.js.map",
+    "index.html": "/privac/index.html",
+    "precache-manifest.2c8ebad936e7a5e0536412379377aec7.js": "/privac/precache-manifest.2c8ebad936e7a5e0536412379377aec7.js",
+    "service-worker.js": "/privac/service-worker.js",
+    "static/css/2.0c0672e5.chunk.css.map": "/privac/static/css/2.0c0672e5.chunk.css.map",
+    "static/css/main.dc934136.chunk.css.map": "/privac/static/css/main.dc934136.chunk.css.map",
+    "static/js/2.64ee4b99.chunk.js.LICENSE.txt": "/privac/static/js/2.64ee4b99.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0d70412.js",
+    "static/css/2.0c0672e5.chunk.css",
+    "static/js/2.64ee4b99.chunk.js",
+    "static/css/main.dc934136.chunk.css",
+    "static/js/main.74c4e253.chunk.js"
+  ]
+}

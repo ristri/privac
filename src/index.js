@@ -15,7 +15,7 @@ class App extends React.Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title">Privac</h1>
-              <h2 className="subtitle">Primary subtitle</h2>
+              <h2 className="subtitle">Code Sharing</h2>
             </div>
           </div>
         </section>

@@ -14,7 +14,7 @@ export class SidePanel extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleQR}>Generate QR </button>
+                <button class="button " onClick={this.handleQR}>Generate QR </button>
                 <div className={this.state.showQR ? "modal is-active" : "modal" }>
                     <div className="modal-background"></div>
                     <div className="modal-content">

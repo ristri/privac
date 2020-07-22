@@ -32,7 +32,8 @@ export class Editor extends React.Component {
   componentDidMount() {
     var location = window.location.href;
     if (location.search("#") !== -1) {
-      var data = location.replace("https://privac.netlify.com/#", "");
+      var data = location.replace("https://ristri.github.io/privac"+"/#", "");
+      console.log(window.location.hostname)
       this.changeValue(data.substring(2), data.substring(0, 1));
     }
   }
@@ -62,7 +63,10 @@ export class Editor extends React.Component {
       url: LZString.compressToEncodedURIComponent(this.state.value)
     });
     window.location.href =
-      "https://privac.netlify.com/#" + cl + "/" + this.state.url;
+      "https://ristri.github.io/privac"+"/#" + cl + "/" + this.state.url;
+  }
+  copyToClipboard = ()=>{
+    navigator.clipboard.writeText(window.location)
   }
   render() {
     return (
@@ -86,6 +90,9 @@ export class Editor extends React.Component {
             <div className="column">
               <span>Font Size:</span>
               <input className="input is-rounded" onChange={this.onFontChange} value={this.state.font} type="number" />
+            </div>
+            <div className="column">
+              <button onClick={this.copyToClipboard} class="button is-dark">Copy URL to Clipboard</button>
             </div>
             <div className="column"></div>
           </div>
